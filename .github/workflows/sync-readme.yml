@@ -6,7 +6,7 @@ name: Sync Github Profile README with GitHub Pages
 on:
   push:
     branches:
-      - '**'
+      - 'main'
   workflow_dispatch:
 
 jobs:
@@ -31,6 +31,6 @@ jobs:
       - name: Publish on GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
-          publish_branch: ${{ github.ref_name }}
+          publish_branch: gh-pages
           publish_dir: ./about-me
           github_token: ${{ secrets.SYNC_PAT }}
