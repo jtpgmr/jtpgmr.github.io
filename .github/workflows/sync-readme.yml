@@ -25,7 +25,7 @@ jobs:
       - name: Prepare and Copy Profile README to Github Pages
         run: |
           mkdir -p about-me
-          if [ -f "README.md" ]; then cp README.md about-me/index.md; fi
+          cp README.md README.md
 
       # Step 3
       - name: Publish on GitHub Pages
